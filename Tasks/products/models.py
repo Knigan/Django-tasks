@@ -30,6 +30,10 @@ class View(models.Model):
     duration = models.IntegerField(default=0)
     viewed = models.BooleanField(default=False)
 
+    def set_duration(self, duration):
+        self.duration = duration
+        self.viewed_check()
+    
     def viewed_check(self):
         self.viewed = float(self.duration) >= float(0.8 * self.lesson.length)
         return self.viewed

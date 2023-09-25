@@ -1,0 +1,9 @@
+{% if stat_list %}
+    <ul>
+    {% for stat in stat_list %}
+        <li><font size="4">{{ stat }}</font></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>There are no products</p>
+{% endif %}

@@ -1,0 +1,9 @@
+{% if lessons_list %}
+    <ul>
+    {% for lesson in lessons_list %}
+        <li><font size="4">{{ lesson }}</font></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>There are no lessons</p>
+{% endif %}
